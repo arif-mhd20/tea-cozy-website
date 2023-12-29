@@ -1,161 +1,140 @@
-*{
-    padding: 0;
-    margin: 0;
-}
-
-body{
-font-family: "Helvetica", sans-serif;
-  color: seashell;
-  background-color: black;
-  font-size: 22px;
-  text-align: center;
-}
-
-.heading{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    background-color: black;
-}
-
-
-header{
-    width:100%;
-    position: fixed;
-    height: 69px;
-    border: 1px solid seashell;
-    align-items: center;
-    z-index: 1;
-}
-
-header img{
-    height: 50px;
-    padding-left:10px
-}
-
-nav{
-    text-align: right;
-    flex-grow: 1;
-    
-}
-
-nav span {
-    
-    display: inline-block;
-    padding: 5px 20px;
-}
-
-main{
-    margin: auto;
-    padding-top: 69px;
-    opacity: 0.9;
-    width: 1200;;
-
-}
-
-h2,
-h3,
-h4 {
-  margin: 0;
-  padding: 10px;
-}
-
-
-#mission{
-    height: 700px;
-    background-image:url("https://content.codecademy.com/courses/freelance-1/unit-4/img-mission-background.jpg");
-    padding-top: 70px;
-}
-
-
-#mission .content{
-    background-color: black;
-    margin: auto;
-    width: 100%;
-}
-
-#store{
-    height:700px;
-    width: 1000px;
-    padding-top: 70px;
-    margin: auto;
-    position: relative;
-    bottom: 50px;
-    
-    
-}
-
-.item{
-    padding: 10px;
-
-}
-
-.item img{
-    height: 200px;
-    display: block;
-    margin: 10px;
-    justify-content: center;
-    align-items: center;
-    width:300px
-   /* margin-left:340px;*/
-}
-
-item span{
-    display: block;
+body {
+    background-color: #fcfcfc;
+    color: #db6363;
     text-align: center;
-    padding: 5px;
-    font-weight: bold;
-}
-
-.heading .location{
-padding-top: 5px;
-position: relative;
-top:150px;
-
-}
-
-#location{
-    background-image: url("https://content.codecademy.com/courses/freelance-1/unit-4/img-locations-background.jpg");
-  height: 500px;
-  padding-top: 200px;
-
-  height: 100%;
-}
-
-#location .heading{
-    margin: auto;
-    width: 1100px;
-}
-
-.location{
-    opacity: 0.1;
-    padding: 10px;
-    margin: 5px 20px;
-    flex-basis: 280px;
-  
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    
-}
-
-#contact {
-    height: 200px;
-    position: relative;
-    top:600px
-    
   }
   
-  /* Footer Section */
+  .grid {
+  display:grid;
+  /*grid-template-rows: 100px 8fr 4fr 5fr 80px;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;*/
+  grid-template: 100px 8fr 4fr 5fr 80px / repeat(6 ,1fr); 
+  gap :20px;
+  
+  }
+  
+  header {
+  grid-column-start: 1 ;
+  grid-column-end: 7 ;
+    display: grid;
+  
+  
+  }
+  
+  .title {
+    margin: auto;
+    color: #dc6363;
+    font-family: Poppins;
+    font-size: 2em;
+    font-weight: 700;
+  }
+  
+  .banner {
+    padding: 3%;
+    background-color: #db6363;
+    color: #ffffff;
+    font-family: Poppins;
+    font-size: 3em;
+    font-weight: 300;
+    letter-spacing: 3.7px;
+    grid-column-start: 1 ;
+  grid-column-end: 7 ;
+  }
+  
+  
+  
+  p, .banner-contents {
+    max-width: 80%;
+    margin: auto;
+    display: grid;
+  
+  }
+  
+  img {
+    height: 5em;
+    margin-left: 75px;
+  }
+  
+  .about {
+    background-color: #f0f0f0;
+    grid-column-start: 1 ;
+  grid-column-end: 7 ;
+    display: grid;
+  
+  
+  
+  }
+  
+  .text {
+    color: #2f2d2d;
+    font-family: Poppins;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+  }
+  
+  .box {
+    background-color: #2f2f2f;
+    color: #ffffff;
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    text-align: center;
+      display: grid;
+  
+  
+  }
+  
+  .address {
+  grid-column: 1 / span 2;
+  }
+  
+  .hours {
+  grid-column: 3 / span 2;
+  
+  }
+  
+  .call-us {
+  grid-column: 5 / span 2;
+  
+  }
+  
+  .icon {
+    height: 80px;
+    margin: auto;
+  }
+  
+  .testimonial {
+    background-color: #f0f0f0;
+    color: #db6363;
+    font-family: Poppins;
+    font-size: 18px;
+    font-style: italic;
+    letter-spacing: 3.7px;
+      display: grid;
+  
+  
+  }
+  
+  .one {
+  grid-column: 1 / span 3;
+  }
+  
+  .two {
+  grid-column:  4 / span 3;
+  }
   
   footer {
-    text-align: left;
-    padding-left: 20px;
-    position: relative;
-    top:600px
+    background-color: #db6363;
+    color: #ffffff;
+    font-family: Poppins;
+    font-size: 16px;
+    letter-spacing: 0.4px;
+  grid-column-start: 1 ;
+  grid-column-end: 7 ;
+    display: grid;
+  grid-row-start: 5 ;
+  grid-row-end: 7 ;
+  
   }
-
-
-
-
-
